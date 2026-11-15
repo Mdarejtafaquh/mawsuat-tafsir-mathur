@@ -1,0 +1,265 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>موسوعة التفسير بالمأثور المطوّرة</title>
+<style>
+:root{--bg:#f3eee3;--card:#fffdf8;--ink:#23201b;--muted:#6f6758;--line:#dcd2bb;--acc:#14586f;--acc2:#0d3f50;--sah:#8a4b00;--tab:#1f6b3a;--tt:#5b3a8c;--raj:#1f8a55;--daf:#a3154f;--taw:#1f3fb0;--soft:#efe8d6;--nav:#16293a;--navink:#eef3f6;--hl:#fff3c4}
+@media (prefers-color-scheme:dark){:root{--bg:#13161b;--card:#1c2027;--ink:#ebe5d8;--muted:#a59d8e;--line:#363d4b;--acc:#6cc3dd;--acc2:#9fd9ec;--sah:#f0b062;--tab:#7fd39c;--tt:#c3a6f0;--raj:#5fd39a;--daf:#ff8cb8;--taw:#8fa8ff;--soft:#252a33;--nav:#0f1a25;--hl:#4a4320}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Lotus Linotype","Traditional Arabic",Amiri,"Scheherazade New",serif;font-size:20px;line-height:1.9}
+button,select,input{font:inherit}
+/* الشريط العلوي */
+header{background:var(--nav);color:var(--navink);position:sticky;top:0;z-index:20;box-shadow:0 2px 10px #0004}
+.top{display:flex;gap:10px;align-items:center;padding:8px 16px;flex-wrap:wrap;max-width:1500px;margin:auto}
+.bw{display:flex;gap:10px;align-items:center}.logo{height:44px;width:auto;display:block}
+.lga{display:block;border-radius:8px}.lga:hover{background:#ffffff18}.rpt{display:inline-block;margin-top:10px;font-family:sans-serif;font-size:12px;color:var(--muted);text-decoration:none;border:1px dashed var(--line);border-radius:999px;padding:1px 10px}.rpt:hover{color:var(--daf);border-color:var(--daf)}
+.isd{font-family:sans-serif;font-size:12px;opacity:.75;white-space:nowrap;border-inline-start:1px solid #5d7180;padding-inline-start:10px}
+#mb,#qb{background:none;border:1px solid #5d7180;color:var(--navink);border-radius:9px;padding:5px 12px;font-family:sans-serif;font-size:13px;cursor:pointer;white-space:nowrap}#mb:hover,#qb:hover{background:#ffffff18}
+dialog{border:1px solid var(--line);border-radius:14px;padding:0;max-width:820px;width:calc(100% - 24px);max-height:88vh;background:var(--card);color:var(--ink);box-shadow:0 20px 60px #0008}
+dialog::backdrop{background:#0009}
+.mh{position:sticky;top:0;background:var(--nav);color:var(--navink);padding:10px 18px;display:flex;justify-content:space-between;align-items:center;font-size:20px;font-weight:bold}
+.mh button{background:none;border:1px solid #5d7180;color:var(--navink);border-radius:8px;padding:2px 12px;font-family:sans-serif;font-size:14px;cursor:pointer}
+.mc{padding:8px 22px 18px;font-size:19px;line-height:1.95}.mc .asl{background:var(--soft);border-inline-start:4px solid var(--acc);border-radius:8px;padding:8px 14px;margin:12px 0 4px}.mc h4{margin:14px 0 2px;color:var(--acc);font-size:19px}.mc ol,.mc ul{margin:2px 0;padding-inline-start:26px}.mc li{margin:4px 0}.mc .nt{color:var(--muted);font-size:16px}
+.brand{font-size:21px;font-weight:bold;white-space:nowrap}.brand small{font-size:12px;font-weight:normal;opacity:.7;font-family:sans-serif;display:block;line-height:1.2}
+.ctl{display:flex;gap:6px;align-items:center;font-family:sans-serif;font-size:14px}
+.ctl select,.ctl input{font-size:15px;padding:6px 8px;border-radius:9px;border:1px solid #5d7180;background:#fff;color:#1c1c1c}
+#sa{width:74px;text-align:center}#ss{min-width:150px}
+.nb{background:var(--acc);color:#fff;border:0;border-radius:9px;padding:6px 14px;cursor:pointer;font-family:sans-serif;font-size:15px;white-space:nowrap}.nb:hover{filter:brightness(1.15)}.nb:disabled{opacity:.4;cursor:default}
+.srch{flex:1;min-width:200px;position:relative}.srch input{width:100%;font-size:16px;padding:7px 12px;border-radius:9px;border:1px solid #5d7180;background:#fff;color:#1c1c1c}
+#res{position:absolute;inset-inline:0;top:calc(100% + 4px);background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:10px;max-height:60vh;overflow:auto;box-shadow:0 8px 24px #0005;display:none;z-index:30}
+#res a{display:block;padding:5px 12px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:18px;line-height:1.8}#res a:hover{background:var(--soft)}#res b{color:var(--acc);font-family:sans-serif;font-size:13px}
+.opts{display:flex;gap:14px;align-items:center;padding:0 16px 7px;font-family:sans-serif;font-size:13px;max-width:1500px;margin:auto;flex-wrap:wrap;opacity:.95}
+#ob{display:none;background:none;border:1px solid #5d7180;color:var(--navink);border-radius:9px;padding:6px 10px;font-family:sans-serif;font-size:14px}
+.opts select{font-size:13px;padding:3px 6px;border-radius:7px;border:1px solid #5d7180}.opts label{display:flex;gap:5px;align-items:center}
+/* الهيكل */
+.wrap{display:grid;grid-template-columns:230px minmax(0,1fr);gap:16px;max-width:1500px;margin:auto;padding:14px 16px 90px}
+aside{position:sticky;top:104px;align-self:start;max-height:calc(100vh - 120px);overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px}
+aside h4{margin:2px 4px 6px;font-size:16px;color:var(--acc)}aside .lg{font-family:sans-serif;font-size:11px;color:var(--muted);margin:0 4px 6px}
+.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.strip button{border:1px solid var(--line);background:none;color:var(--muted);border-radius:7px;padding:3px 0;cursor:pointer;font-family:sans-serif;font-size:13px;position:relative}
+.strip button.k{color:var(--ink);background:var(--soft);border-color:var(--acc);font-weight:bold}.strip button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.strip button sup{font-size:9px;color:var(--daf);position:absolute;top:-2px;inset-inline-start:2px}.strip button.on sup{color:#fff}
+/* الآية */
+.ayah{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 20px;margin-bottom:14px;border-inline-start:6px solid var(--acc)}
+.ayah .tx{font-size:27px;line-height:2.2}.ayah .mt{font-family:sans-serif;font-size:13px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.ayah .mt b{color:var(--acc)}.pill{background:var(--soft);border-radius:999px;padding:1px 10px}
+.u{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:0 0 14px;overflow:hidden}
+.u>h3{margin:0;padding:7px 16px;font-size:20px;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:baseline}.u>h3 i{font-style:normal;font-family:sans-serif;font-size:12px;color:#fff;background:var(--acc);border-radius:999px;padding:0 8px}
+.tabs{display:flex;border-bottom:1px solid var(--line);font-family:sans-serif;font-size:14px;background:var(--soft)}
+.tabs button{border:0;background:none;color:var(--muted);padding:7px 16px;cursor:pointer;border-bottom:3px solid transparent}
+.tabs button.on{color:var(--acc);border-bottom-color:var(--acc);font-weight:bold;background:var(--card)}.tabs button:disabled{opacity:.35;cursor:default}
+.body{padding:8px 16px 12px}.imgw{overflow-x:auto}.imgw img{max-width:100%;display:block;margin:0 auto 2px;border:1px solid var(--line);background:#fff;cursor:zoom-in}.imgw img.big{max-width:none;width:700px;cursor:zoom-out}
+ol{margin:4px 0;padding-inline-start:28px}li{margin:7px 0}
+.chip{display:inline-block;font-family:sans-serif;font-size:13px;border-radius:999px;padding:0 9px;margin-inline-end:4px;border:1px solid currentColor;white-space:nowrap}
+.t-s{color:var(--sah)}.t-t{color:var(--tab)}.t-tt{color:var(--tt)}.t-b,.t-0{color:var(--muted)}.t-0{border-style:dashed}
+.tag{display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;border-radius:6px;padding:0 8px;margin-inline-end:4px;color:#fff}
+.sumr{background:var(--soft);border-radius:10px;padding:5px 10px;margin:2px 0 8px;font-size:17px;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline}
+.sumr .sl{font-family:sans-serif;font-size:12px;font-weight:bold;color:var(--acc)}.sumr .sm b{color:var(--raj)}
+.tg1{white-space:nowrap}.rule{display:inline-block;font-family:sans-serif;font-size:12px;border-radius:5px;padding:0 6px;margin-inline-end:4px;border:1px solid var(--acc);color:var(--acc);background:color-mix(in srgb,var(--acc) 8%,transparent);white-space:nowrap}.rule.no{border-style:dashed;color:var(--muted);border-color:var(--muted);background:none}
+#qd table{font-size:17px}#qd td.c{text-align:center;cursor:pointer}#qd td.c:hover,#qd td.on{background:color-mix(in srgb,var(--acc) 22%,transparent)}#qd td.z{text-align:center;color:var(--muted)}
+#qm a{display:inline-block;margin:2px 3px;padding:0 8px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:16px}
+.tag.r{background:var(--raj)}.tag.d{background:var(--daf)}.tag.w{background:var(--taw)}.tag.q{background:var(--muted)}
+@media (prefers-color-scheme:dark){.tag{color:#111}}
+details{margin:2px 0}summary{cursor:pointer;font-family:sans-serif;font-size:13px;color:var(--muted)}
+.at{border-inline-start:3px solid var(--line);padding:2px 10px;margin:4px 0;font-size:18px}.nm{font-family:sans-serif;font-size:12px;color:var(--muted)}
+.none{color:var(--muted);font-size:15px}.tj{border-inline-start:3px solid var(--raj);padding-inline-start:10px;margin:8px 0;font-size:18px}
+.tw{overflow-x:auto}table{border-collapse:collapse;font-size:17px;width:100%}td,th{border:1px solid var(--line);padding:2px 9px;text-align:right;vertical-align:top}th{background:var(--soft);font-family:sans-serif;font-size:14px}
+.sec{font-family:sans-serif;font-size:14px;font-weight:bold;color:var(--acc);margin:12px 0 2px}.q{font-size:17px;color:var(--muted)}
+.k-ترجيح{color:var(--raj)}.k-نقد{color:var(--daf)}.k-توجيه{color:var(--taw)}a{color:var(--acc)}
+.empty{background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:18px;text-align:center;color:var(--muted)}
+/* شريط التنقل السفلي */
+.foot{position:fixed;bottom:0;inset-inline:0;background:var(--nav);color:var(--navink);display:flex;gap:10px;align-items:center;justify-content:center;padding:8px 12px;z-index:15;box-shadow:0 -2px 10px #0004;font-family:sans-serif;font-size:14px}
+.foot .nb{padding:8px 22px;font-size:16px}.foot span{min-width:150px;text-align:center}
+@media (max-width:860px){
+ body{font-size:18.5px}.wrap{grid-template-columns:1fr;padding:8px 8px 84px;gap:8px}
+ aside{position:static;max-height:none;padding:6px}.strip{display:flex;overflow-x:auto;gap:4px;padding-bottom:4px}.strip button{flex:0 0 42px;padding:6px 0}aside .lg{display:none}aside h4{display:none}
+ .top{padding:6px 8px;gap:6px}.brand small{display:none}.brand{font-size:17px}.bw{flex:1 1 100%;flex-wrap:wrap;gap:6px 8px}.logo{height:32px}.isd{font-size:11px;padding-inline-start:8px}#mb{margin-inline-start:auto;padding:5px 9px}.mc{padding:6px 14px 14px;font-size:18px}.srch{flex:1 1 100%;order:5}.top .nb{display:none}
+ .ctl select,.ctl input{padding:8px}.opts{padding:0 8px 6px;gap:10px;display:none}.opts.show{display:flex}#ob{display:inline-block}.ctl{flex:1}#ss{flex:1;min-width:0}
+ header{position:static}.ayah{padding:10px 12px}.ayah .tx{font-size:22px;line-height:2.1}
+ .u>h3{font-size:18px;padding:7px 10px}.tabs button{flex:1;padding:10px 2px}.body{padding:6px 10px}
+ summary{font-size:15px;padding:7px 0}
+ .tw{overflow:visible}table,tbody,tr,td{display:block;width:100%}tr:first-child{display:none}
+ tr{border:1px solid var(--line);border-radius:8px;margin:8px 0;padding:4px 8px;background:var(--soft)}
+ td{border:0;padding:1px 0}td:empty{display:none}td[data-l]::before{content:attr(data-l) "： ";font-family:sans-serif;font-size:12px;color:var(--muted)}
+}
+</style></head><body>
+<header><div class="top">
+ <div class="bw"><div class="brand">موسوعة التفسير بالمأثور المطوّرة</div><span class="isd">تطوير وإخراج: منصة</span><a class="lga" href="https://t.me/Mdarejtafaquh" target="_blank" rel="noopener" title="قناة مدارج على تيليجرام"><img class="logo" alt="مدارج" src="data:image/png;base64,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"></a><button id="mb" title="منهج الموسوعة">منهج الموسوعة</button><button id="qb" class="hb" title="فائدة: قواعد الترجيح عند المحققين">قواعد الترجيح</button></div>
+ <div class="ctl"><select id="ss" title="السورة"></select><input id="sa" type="number" min="1" title="رقم الآية"><span id="sof"></span><button id="ob" title="خيارات العرض">خيارات</button></div>
+ <button class="nb" id="pv" title="الآية السابقة (السهم الأيمن)">▶ السابقة</button><button class="nb" id="nx" title="الآية التالية (السهم الأيسر)">التالية ◀</button>
+ <div class="srch"><input id="q" inputmode="search" placeholder="ابحث: الأحزاب 52 · 33:52 · أو لفظ من أي آية" autocomplete="off"><div id="res"></div></div>
+</div>
+<div class="opts"><label><input type="checkbox" id="ok" checked> التنقل بين آيات الخلاف فقط</label>
+ <label>العرض الافتراضي <select id="fv"><option value="tabari">تقسيم الطبري</option><option value="mushid">عرض المشد</option><option value="mawsua">تلخيص المحررين</option></select></label>
+ <label>ترجيحات محقق في السورة <select id="fm"><option value="">—</option></select></label><span id="st"></span></div></header>
+<dialog id="mn"><div class="mh"><span>منهج الموسوعة</span><button onclick="document.getElementById('mn').close()">إغلاق</button></div><div class="mc">
+<p class="asl">مبنيّة على «موسوعة التفسير المأثور» لمركز الدراسات والمعلومات القرآنية، و«جامع البيان» للطبري، و«أقوال السلف في التفسير من جامع البيان لابن جرير» للدكتور عبد الرحمن المشد. وعمل منصة مدارج فيها: الترتيب والربط والإخراج، والمادة العلمية لأصحابها.</p>
+<h4>الغاية</h4>
+<ul><li>عرض خلاف السلف في تفسير الآية مرتبًا بحسب الأقوال، مع قائلي كل قول، ثم ترجيحات خمسة من المحققين وتعليلها: الطبري، وابن عطية، وابن كثير، وابن تيمية، وابن القيم.</li>
+<li>وُضعت للمذاكرة والتحضير والبحث، وليست بديلًا عن الرجوع إلى الأصول عند التوثيق.</li></ul>
+<h4>المصادر</h4>
+<ol><li>«جامع البيان» للطبري، طبعة دار هجر: منه مواضع الخلاف وتقسيم الأقوال وقائلوها ونص ترجيحه.</li>
+<li>«أقوال السلف في التفسير من جامع البيان لابن جرير» للدكتور عبد الرحمن المشد: منه جداوله مصوَّرة، ورمزاه (ر) لما رجّحه الطبري و(ض) لما ضعّفه.</li>
+<li>«موسوعة التفسير المأثور» وتعليقات محرريها: منها الآثار بنصوصها وتخريجها، وتلخيص الخلاف، وترجيحات المحققين ومستنداتهم.</li></ol>
+<h4>موضع الخلاف وأقواله</h4>
+<ul><li>يُعدّ الموضع خلافًا إذا صرّح به الطبري («اختلف أهل التأويل في…») أو أورد بعد بيانه «وقال آخرون»، أو صرّح به محررو الموسوعة («اختُلف في كذا على أقوال»).</li>
+<li>لكل موضع ثلاثة عروض: <b>تقسيم الطبري</b> بترتيبه ولفظه، و<b>عرض المشد</b> بصورة جدوله، و<b>تلخيص المحررين</b>. وقد يختلف عدد الأقوال وترقيمها بين العروض.</li>
+<li>الأقوال والآثار ونصوص المحققين منقولة بحروف مصادرها، بلا تصرف ولا صياغة جديدة. ونص الطبري معروض بلا تشكيل.</li></ul>
+<h4>القائلون وطبقاتهم</h4>
+<ul><li>قائلو القول في تقسيم الطبري مأخوذون من أسانيد الآثار تحته، وفي تلخيص المحررين من قولهم «وهذا قول فلان».</li>
+<li>الألوان للطبقة: صحابي، تابعي، تابع التابعين، من بعدهم. وما اشتبه اسمه تُرك بلا طبقة.</li>
+<li>«آثاره في الموسوعة» تحت القول مربوطة باسم قائله، لا بمعنى الأثر.</li></ul>
+<h4>الترجيح ووسومه</h4>
+<ul><li>وسم <b>الطبري</b> على القول من رمز المشد، أو من تصريح المحررين برقم القول.</li>
+<li>وسم <b>سائر المحققين</b> من كلام محرري الموسوعة: برقم القول، أو باسم قائله («رجّح قول مجاهد»)، أو بالموافقة («وبنحوه ابن عطية»، «ووافقه ابن كثير») فيأخذ قول من وافقه.</li>
+<li>«رجّحه»: صرّح المحررون بترجيحه. «ذهب إليه»: قال به بلا لفظ ترجيح. «انتقده» و«ضعّفه»: ردّه. «وجّهه»: بيّن وجهه.</li>
+<li>شريط «اختيارات المحققين» أعلى البطاقة يجمع اختيار كل محقق. وما رجّح فيه المحقق ولم يُعرف قوله من عبارة المحررين كُتب «لم يتعيّن»، ونصه في جدول الترجيحات.</li>
+<li><b>قاعدة الترجيح</b> مأخوذة من وصف المحررين («مستندًا إلى السياق، واللغة»)، وموحَّدة في سبع عشرة قاعدة: اللغة، السياق، الدلالة العقلية، ظاهر الآية، القرآن والنظائر، السنة، أقوال السلف، الإجماع، القراءة، العموم، سبب النزول، التاريخ والواقع، وغيرها. فهي وصف المحررين لمستند المحقق، لا لفظه.</li></ul>
+<h4>حدود ينبغي استحضارها</h4>
+<ul><li>الاستخراج آليّ من الصيغ الثابتة في المصادر، ولم يُراجَع كله يدويًّا. فالخلاف الذي يُفهم من الآثار بلا تصريح قد لا يظهر.</li>
+<li>رموز المشد مقروءة آليًّا من صورة كتابه، وصورة جدوله ظاهرة في البطاقة للتحقق عند الشك.</li>
+<li>بعض صفوف جداول المشد لم تُربط بموضع من نص الطبري، فتُعرض صورتها تحت أقرب آية.</li>
+<li>ابن تيمية وابن القيم قليلان هنا بقدر ما نقلت عنهما الموسوعة.</li>
+<li>لم يُكتب في الموسوعة توجيه ولا ترجيح من غير مصادرها.</li></ul>
+<h4>الاستعمال</h4>
+<ul><li>التنقل بزرّي «السابقة» و«التالية» أو بسهمي لوحة المفاتيح، ومن شريط أرقام الآيات. وخيار «التنقل بين آيات الخلاف فقط» يتجاوز الآيات التي لا خلاف فيها.</li>
+<li>البحث يقبل «الأحزاب 52» أو «33:52» أو اسم سورة أو لفظًا من أي آية.</li></ul>
+<h4>التواصل والتطوير</h4>
+<ul><li>هذه الموسوعة مستخرجة آليًّا ولم تُراجَع كلها، فملاحظاتك تصحّحها. ما وجدتَه من خطأ في نسبة قول أو ترجيح، أو موضع خلاف لم يظهر، أو اقتراح في العرض، فأرسله إلى: <a href="mailto:Feqh.hanbali@gmail.com?subject=%D9%85%D9%88%D8%B3%D9%88%D8%B9%D8%A9%20%D8%A7%D9%84%D8%AA%D9%81%D8%B3%D9%8A%D8%B1%20%D8%A8%D8%A7%D9%84%D9%85%D8%A3%D8%AB%D9%88%D8%B1%20%D8%A7%D9%84%D9%85%D8%B7%D9%88%D9%91%D8%B1%D8%A9" dir="ltr">Feqh.hanbali@gmail.com</a></li>
+<li>ويحسن أن تذكر السورة والآية. وفي أسفل كل بطاقة رابط «بلّغ عن خطأ في هذا الموضع» يفتح رسالة جاهزة بموضعها.</li>
+<li>قناة المنصة على تيليجرام: <a href="https://t.me/Mdarejtafaquh" target="_blank" rel="noopener" dir="ltr">t.me/Mdarejtafaquh</a></li></ul>
+<div class="nt">الإحالات بالجزء والصفحة كما وردت في مصادرها: الطبري على طبعة هجر، وسائر المحققين على الطبعات التي أحال عليها محررو الموسوعة.</div>
+</div></dialog>
+<dialog id="qd"><div class="mh"><span>فائدة: قواعد الترجيح عند المحققين</span><button onclick="document.getElementById('qd').close()">إغلاق</button></div><div class="mc">
+<p class="asl">القواعد التي استند إليها كل محقق في ترجيحه ونقده، محصورةً من وصف محرري «موسوعة التفسير المأثور» («مستندًا إلى اللغة، والسياق»). العدد مرات ذكر القاعدة عند المحقق في القرآن كله. انقر عددًا لتظهر مواضعه.</p>
+<div class="tw" id="qt"></div><div id="qm"></div>
+<div class="nt">التصنيف بلفظ المحررين لا بلفظ المحقق نفسه، وموحَّد بالكلمة المفتاحية. و«لم يذكر مستندًا» من تصريح المحررين. وقلة ابن تيمية وابن القيم بقدر ما نقلت عنهما الموسوعة.</div></div></dialog>
+<div class="wrap"><aside><h4 id="sn"></h4><div class="lg">المظلَّل: آية فيها خلاف، والرقم الصغير عدد مواضعه</div><div class="strip" id="strip"></div></aside><main id="out"></main></div>
+<div class="foot"><button class="nb" id="pv2">▶ السابقة</button><span id="pos"></span><button class="nb" id="nx2">التالية ◀</button></div>
+<script>window.KH_WEB = true;</script>
+<script src="بيانات/fihris.js"></script>
+<script>
+const IX = window.KH_INDEX, $ = s => document.querySelector(s), SD = {};
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])), ar = n => Number(n).toLocaleString("ar-EG", {useGrouping: false});
+const bare = t => String(t).replace(/[ؐ-ًؚ-ٰٟۖ-ۭـ]/g, "").replace(/[أإآٱ]/g, "ا").replace(/ى/g, "ي").replace(/ة/g, "ه");
+const en = s => String(s).replace(/[٠-٩]/g, d => "٠١٢٣٤٥٦٧٨٩".indexOf(d)), pad = n => String(n).padStart(3, "0");
+const TC = {"صحابي": "t-s", "تابعي": "t-t", "تابع التابعين": "t-tt", "من بعدهم": "t-b"}, SU = {}; IX.suwar.forEach(s => SU[s.n] = s);
+const MUH = ["ابن جرير", "ابن عطية", "ابن كثير", "ابن تيمية", "ابن القيم"], ORDS = ["الأول", "الثاني", "الثالث", "الرابع", "الخامس", "السادس", "السابع", "الثامن", "التاسع", "العاشر"];
+let S = 0, A = 0, D = null, view = {};
+try { const o = JSON.parse(localStorage.getItem("kh_opts") || "{}"); if(o.fv) $("#fv").value = o.fv; if(o.ok === false) $("#ok").checked = false; } catch(e){}
+const saveOpts = () => { try { localStorage.setItem("kh_opts", JSON.stringify({fv: $("#fv").value, ok: $("#ok").checked})); } catch(e){} };
+$("#ss").innerHTML = IX.suwar.map(s => '<option value="' + s.n + '">' + ar(s.n) + '. ' + esc(s.name) + (s.kh.length ? ' (' + ar(s.units) + ')' : '') + '</option>').join("");
+$("#fm").innerHTML += MUH.map(m => '<option>' + m + '</option>').join("");
+window.KH_SURA = (n, d) => { SD[n] = d; };
+async function inflate(id){ const b = Uint8Array.from(atob(document.getElementById(id).textContent), c => c.charCodeAt(0)); return await new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream("gzip"))).text(); }
+const EMB = !!document.getElementById("kh-mushaf");  // الملف الواحد المستقل: كل البيانات والصور مضمَّنة فيه مضغوطةً
+function load(n){ return new Promise((ok, no) => { if(SD[n]) return ok(SD[n]); if(EMB){ inflate("kh-s" + n).then(t => { SD[n] = JSON.parse(t); ok(SD[n]); }).catch(no); return; } const sc = document.createElement("script"); sc.src = "بيانات/" + pad(n) + ".js"; sc.onload = () => SD[n] ? ok(SD[n]) : no(); sc.onerror = no; document.head.appendChild(sc); }); }
+/* —— عرض البطاقات —— */
+const img = f => '<img loading="lazy" src="' + (D.imgs ? D.imgs[f] : "مشد/" + f) + '" alt="جدول المشد" onclick="this.classList.toggle(\'big\')">';
+function athar(L){ return L.length ? '<details><summary>آثاره في الموسوعة (' + ar(L.length) + ')</summary>' + L.map(n => { const a = D.athar[n]; return a ? '<div class="at"><span class="nm">' + a.num + '</span> <span class="chip ' + (TC[a.tabaqa] || "t-0") + '">' + esc(a.qail) + '</span>' + esc(a.text.slice(0, 600)) + (a.text.length > 600 ? '…' : '') + '</div>' : ''; }).join("") + '</details>' : ''; }
+const ordn = q => ORDS.indexOf(q) + 1;
+const nm = a => a === "ابن جرير" ? "الطبري" : a, LB = {r: "رجّحه", q: "ذهب إليه", w: "وجّهه"};
+const ORD = {r: 0, q: 1, d: 2, w: 3};
+const ruleH = L => (L || []).map(q => '<span class="rule' + (q.startsWith("لم يذكر") ? ' no' : '') + '" title="قاعدة الترجيح كما وصفها محررو الموسوعة">' + esc(q) + '</span>').join("");
+function tagH(L, u){ return (L || []).slice().sort((x, y) => ORD[x[1]] - ORD[y[1]] || MUH.indexOf(x[0]) - MUH.indexOf(y[0])).map(([a, t]) => '<span class="tg1"><span class="tag ' + t + '">' + (t === "d" ? (a === "ابن جرير" ? "ضعّفه" : "انتقده") : LB[t]) + ' ' + esc(nm(a)) + '</span>' +
+  (t === "w" ? '' : ruleH(((t === "d" ? u.tags.rulesD : u.tags.rules) || {})[a])) + '</span>').join(""); }
+function tagsMawsua(u, n){ return tagH(u.tags.m[n], u); }
+function summ(u, v){ // خلاصة: اختيار كل محقق في هذا الموضع
+  const sp = u.tags[v === "mawsua" ? "m" : "t"], by = {};
+  Object.entries(sp).forEach(([n, L]) => L.forEach(([a, t]) => { if(t === "r" || t === "q") (by[a] = by[a] || []).push([+n, t]); }));
+  const P = MUH.filter(a => by[a]).map(a => '<span class="sm"><b>' + esc(nm(a)) + '</b> ' + by[a].sort((x, y) => x[0] - y[0]).map(x => (x[1] === "r" ? 'رجّح ' : 'ذهب إلى ') + 'القول ' + ar(x[0])).join("، ") + ' ' + ruleH((u.tags.rules || {})[a]) + '</span>')
+    .concat(u.tags.gen.map(g => '<span class="sm"><b>' + esc(nm(g[0])) + '</b> ' + esc(g[1]) + ' ' + (by[g[0]] ? '' : ruleH((u.tags.rules || {})[g[0]])) + '</span>'));
+  return P.length ? '<div class="sumr"><span class="sl">اختيارات المحققين</span>' + P.join("") + '</div>' : ''; }
+function tawjih(u, n){ const L = u.mawaqif.filter(w => ordn(w.qawl) === n && w.nass && ["توجيه", "ترجيح", "نقد", "قول", "بيان"].includes(w.kind));
+  return L.length ? '<details><summary>توجيهه وتعليله من كلام المحققين (' + ar(L.length) + ')</summary>' + L.map(w => '<div class="at"><b>' + esc(w.alam) + '</b> <span class="chip k-' + esc(w.kind) + '">' + esc(w.kind) + '</span><span class="none">' + esc(w.ref) + '</span><div class="q">«' + esc(w.nass) + '»</div></div>').join("") + '</details>' : ''; }
+function vTabari(u){ const t = u.tabari, h = u.mushid;
+  const tg = n => tagH(u.tags.t[n], u);
+  return '<div class="none">تقسيم الطبري في «جامع البيان» ' + esc(t.page) + (t.sarih ? '' : ' — لم يصرّح بالاختلاف، والقول الأول ما قدّمه') + (h && !h.match ? ' — عدد الأقوال عند المشد ' + ar(h.n) + ' فلم تُنقل رموزه' : '') + '</div><ol>' +
+    t.aqwal.map(q => '<li value="' + q.n + '">' + tg(q.n) + esc(q.t) + ' <span class="none">(' + ar(q.n_athar) + ' أثرًا)</span><div>' + q.qailun.map(x => '<span class="chip ' + (TC[x[1]] || "t-0") + '" title="' + esc(x[1] || "غير مصنَّف") + '">' + esc(x[0]) + '</span>').join("") + '</div>' + athar(q.athar) + '</li>').join("") + '</ol>' +
+    (t.tarjih ? '<div class="tj"><b>ترجيح الطبري بلفظه</b> <span class="none">— ' + esc(t.how) + '</span><div>' + esc(t.tarjih) + '</div></div>' : '<div class="none">لم يُلتقط للطبري ترجيح مصرَّح به بعد هذه الأقوال.</div>'); }
+function vMushid(u){ const h = u.mushid; return '<div class="none">من كتاب د. المشد «أقوال السلف في التفسير»، ص' + h.pages.map(ar).join("–") + ' — الأقوال ' + ar(h.n) + (h.rajih.length ? '، (ر) على القول ' + h.rajih.map(ar).join("، ") : '') + (h.daif.length ? '، (ض) على القول ' + h.daif.map(ar).join("، ") : '') + '</div><div class="imgw">' + h.imgs.map(img).join("") + '</div>'; }
+function vMawsua(u){ const m = u.mawsua; return '<div class="none">' + (m.nasib ? 'من كلام ' + esc(m.nasib) + ' كما نقله المحررون' : 'تلخيص محرري «موسوعة التفسير المأثور»') + ' [' + m.taliq + '] — ' + esc(m.masala) + '</div><ol>' +
+  m.aqwal.map(q => '<li value="' + q.n + '">' + tagsMawsua(u, q.n) + esc(q.t) + (q.ashab ? ' <span class="chip t-t">' + esc(q.ashab) + '</span>' : '') + athar(q.athar) + tawjih(u, q.n) + '</li>').join("") + '</ol>'; }
+function tarjihTable(L){ const R = L.filter(w => ["ترجيح", "نقد", "توجيه", "قول"].includes(w.kind) || w.qawaid.length);
+  return R.length ? '<div class="sec">ترجيحات المحققين وتعليلها</div><div class="tw"><table><tr><th>المحقق وفعله</th><th>القول</th><th>قاعدة الترجيح</th><th>الموضع</th><th>تعليله بنصه</th></tr>' +
+    R.map(w => '<tr><td><b>' + esc(w.alam) + '</b> <span class="k-' + esc(w.kind) + '" style="font-weight:bold">' + esc(w.fil) + '</span></td><td data-l="القول">' + esc(w.qawl) + '</td><td data-l="القاعدة">' + w.qawaid.map(q => '<span class="chip">' + esc(q) + '</span>').join("") + '</td><td class="none" data-l="الموضع">' + esc(w.ref) + '</td><td class="q">' + (w.nass ? '«' + esc(w.nass.slice(0, 420)) + (w.nass.length > 420 ? '…' : '') + '»' : '') + '</td></tr>').join("") + '</table></div>' : ''; }
+function unit(u, k, n){ const av = ["tabari", "mushid", "mawsua"].filter(x => u[x]); let v = view[u.id] || $("#fv").value; if(!u[v]) v = av[0];
+  const lab = {tabari: "تقسيم الطبري", mushid: "عرض المشد", mawsua: "تلخيص المحررين"};
+  return '<section class="u" id="u' + u.id + '"><h3>' + (n > 1 ? '<i>' + ar(k) + ' من ' + ar(n) + '</i>' : '') + '<span>' + esc(u.title) + '</span></h3><div class="tabs">' + ["tabari", "mushid", "mawsua"].map(x => '<button data-u="' + u.id + '" data-v="' + x + '" class="' + (x === v ? "on" : "") + '"' + (u[x] ? '' : ' disabled') + '>' + lab[x] + '</button>').join("") + '</div><div class="body">' +
+    summ(u, v) + (v === "tabari" ? vTabari(u) : v === "mushid" ? vMushid(u) : vMawsua(u)) + tarjihTable(u.mawaqif) + report(u, lab[v]) + '</div></section>'; }
+function report(u, v){ const sub = "تصحيح: " + SU[S].name + " " + A + " — موسوعة التفسير بالمأثور المطوّرة";
+  const body = "السورة: " + SU[S].name + " (" + S + ")\nالآية: " + A + "\nالموضع: " + u.title + "\nالعرض: " + v + "\n\nالملاحظة:\n";
+  return '<div><a class="rpt" href="mailto:Feqh.hanbali@gmail.com?subject=' + encodeURIComponent(sub) + '&body=' + encodeURIComponent(body) + '">بلّغ عن خطأ في هذا الموضع</a></div>'; }
+function others(a){ const L = D.others[a] || []; return L.length ? '<details class="u" style="padding:4px 14px"><summary style="font-size:14px">تعليقات أخرى لمحرري الموسوعة على الآية (' + ar(L.length) + ')</summary>' + L.map(x => '<div class="at"><span class="chip">' + esc(x.kinds.replace(/،/g, " · ")) + '</span><span class="nm">[' + x.id + ']</span><div style="white-space:pre-wrap">' + esc(x.text) + '</div></div>').join("") + '</details>' : ''; }
+/* —— التنقل —— */
+const UA = a => D.units.filter(u => u.aya === a), EX = a => D.extra.filter(e => e.aya === a);
+function step(dir){ // الآية التالية أو السابقة، عابرةً حدود السور
+  const only = $("#ok").checked; let s = S, a = A;
+  for(let guard = 0; guard < 7000; guard++){
+    a += dir;
+    if(a < 1){ s -= 1; if(s < 1) return null; a = SU[s].ayat; } else if(a > SU[s].ayat){ s += 1; if(s > 114) return null; a = 1; }
+    if(!only || SU[s].kh.includes(a)) return [s, a];
+  } return null; }
+function bindTabs(){ $("#out").querySelectorAll(".tabs button").forEach(b => b.onclick = () => { view[b.dataset.u] = b.dataset.v; const u = D.units[b.dataset.u], L = UA(u.aya); document.getElementById("u" + u.id).outerHTML = unit(u, L.indexOf(u) + 1, L.length); bindTabs(); }); }
+function strip(){ const cnt = {}; D.units.forEach(u => cnt[u.aya] = (cnt[u.aya] || 0) + 1); $("#sn").textContent = "سورة " + SU[S].name;
+  let h = ""; for(let a = 1; a <= SU[S].ayat; a++) h += '<button data-a="' + a + '" class="' + (cnt[a] || EX(a).length ? "k " : "") + (a === A ? "on" : "") + '">' + (cnt[a] ? '<sup>' + ar(cnt[a]) + '</sup>' : '') + ar(a) + '</button>';
+  $("#strip").innerHTML = h; $("#strip").querySelectorAll("button").forEach(b => b.onclick = () => go(S, +b.dataset.a));
+  const on = $("#strip .on"); if(on) on.scrollIntoView({block: "nearest", inline: "center"}); }
+function draw(){
+  $("#ss").value = S; $("#sa").value = A; $("#sa").max = SU[S].ayat; $("#sof").textContent = "من " + ar(SU[S].ayat);
+  const p = step(-1), n = step(1); ["#pv", "#pv2"].forEach(i => $(i).disabled = !p); ["#nx", "#nx2"].forEach(i => $(i).disabled = !n);
+  $("#pos").textContent = SU[S].name + " " + ar(A); document.title = SU[S].name + " " + ar(A) + " — موسوعة التفسير بالمأثور المطوّرة"; strip();
+  const fm = $("#fm").value;
+  if(fm){ const L = []; D.units.forEach(u => u.mawaqif.forEach(w => { if(w.alam === fm && ["ترجيح", "نقد", "توجيه", "قول"].includes(w.kind)) L.push([u, w]); }));
+    Object.entries(D.others).forEach(([a, X]) => X.forEach(x => x.mawaqif.forEach(w => { if(w.alam === fm && ["ترجيح", "نقد", "توجيه"].includes(w.kind)) L.push([{aya: +a, title: ""}, w]); })));
+    L.sort((x, y) => x[0].aya - y[0].aya); $("#st").textContent = ar(L.length) + " موضعًا";
+    $("#out").innerHTML = '<div class="u"><h3><span>ترجيحات ' + esc(fm) + ' ونقده وتوجيهه في سورة ' + esc(SU[S].name) + '</span></h3><div class="body tw"><table><tr><th>الآية</th><th>المسألة</th><th>فعله</th><th>القول</th><th>القاعدة</th><th>الموضع</th><th>نصه</th></tr>' +
+      L.map(([u, w]) => '<tr><td data-l="الآية"><a href="#' + S + ':' + u.aya + '" data-a="' + u.aya + '">' + ar(u.aya) + '</a></td><td>' + esc(u.title.slice(0, 90)) + '</td><td class="k-' + esc(w.kind) + '" style="font-weight:bold">' + esc(w.fil) + '</td><td data-l="القول">' + esc(w.qawl) + '</td><td data-l="القاعدة">' + w.qawaid.map(q => '<span class="chip">' + esc(q) + '</span>').join("") + '</td><td class="none" data-l="الموضع">' + esc(w.ref) + '</td><td class="q">' + (w.nass ? '«' + esc(w.nass.slice(0, 300)) + (w.nass.length > 300 ? '…' : '') + '»' : '') + '</td></tr>').join("") + '</table></div></div>' || '';
+    $("#out").querySelectorAll("a[data-a]").forEach(x => x.onclick = e => { e.preventDefault(); $("#fm").value = ""; go(S, +x.dataset.a); });
+    return; }
+  $("#st").textContent = "";
+  const L = UA(A), X = EX(A);
+  $("#out").innerHTML = '<div class="ayah"><div class="tx">﴿' + esc(D.ayat[A] || "") + '﴾</div><div class="mt"><span class="pill"><b>' + esc(SU[S].name) + '</b> ' + ar(A) + '</span><span>' + (L.length ? ar(L.length) + ' موضع خلاف' : 'لا موضع خلاف مستخرَج') + '</span><span>' + ar(D.n_athar[A] || 0) + ' أثرًا في الموسوعة</span>' + (EMB || window.KH_WEB ? '' : '<a href="سور/' + pad(S) + '.html" target="_blank">صفحة آثار السورة</a>') + '</div></div>' +
+    L.map((u, i) => unit(u, i + 1, L.length)).join("") +
+    X.map(e => '<section class="u"><h3><span>' + (e.ihala ? 'إحالة عند المشد' : 'صف عند المشد لم يُحاذَ بمسألة من نص الطبري') + '</span></h3><div class="body"><div class="imgw">' + e.imgs.map(img).join("") + '</div></div></section>').join("") + others(A) +
+    (!L.length && !X.length && !(D.others[A] || []).length ? '<div class="empty">لم يُستخرج في هذه الآية خلاف ولا تعليق. انتقل إلى التالية، أو فعّل «التنقل بين آيات الخلاف فقط».</div>' : '');
+  bindTabs(); }
+async function go(s, a, push = true){ s = Math.min(114, Math.max(1, s | 0)); a = Math.min(SU[s].ayat, Math.max(1, a | 0));
+  try { D = await load(s); } catch(e){ $("#out").innerHTML = '<div class="empty">تعذّر تحميل بيانات سورة ' + esc(SU[s].name) + '.' + (typeof DecompressionStream === "undefined" ? ' هذا المتصفح قديم لا يفكّ البيانات المضغوطة؛ حدّثه أو استعمل متصفحًا آخر.' : '') + '</div>'; return; }
+  D.units.forEach((u, i) => u.id = i); if(s !== S) view = {}; S = s; A = a;
+  if(push && location.hash !== "#" + s + ":" + a) history.pushState(null, "", "#" + s + ":" + a);
+  draw(); window.scrollTo({top: 0}); }
+const firstKh = s => SU[s].kh.length ? SU[s].kh[0] : 1;
+$("#ss").onchange = () => { $("#fm").value = ""; go(+$("#ss").value, firstKh(+$("#ss").value)); };
+$("#sa").onchange = () => go(S, +en($("#sa").value));
+["#pv", "#pv2"].forEach(i => $(i).onclick = () => { const p = step(-1); if(p) go(p[0], p[1]); }); ["#nx", "#nx2"].forEach(i => $(i).onclick = () => { const n = step(1); if(n) go(n[0], n[1]); });
+$("#ok").onchange = () => { saveOpts(); draw(); }; $("#fv").onchange = () => { view = {}; saveOpts(); draw(); }; $("#fm").onchange = draw;
+document.addEventListener("keydown", e => { if(/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) return; if(e.key === "ArrowLeft"){ const n = step(1); if(n) go(n[0], n[1]); } if(e.key === "ArrowRight"){ const p = step(-1); if(p) go(p[0], p[1]); } if(e.key === "/"){ e.preventDefault(); $("#q").focus(); } });
+/* —— البحث —— */
+let MS = null; function mushaf(){ return new Promise(ok => { if(MS) return ok(MS); if(EMB){ inflate("kh-mushaf").then(t => { MS = JSON.parse(t).map(a => [a[0], a[1], a[2], bare(a[2])]); ok(MS); }); return; } const sc = document.createElement("script"); sc.src = "بيانات/mushaf.js"; sc.onload = () => { MS = window.KH_MUSHAF.map(a => [a[0], a[1], a[2], bare(a[2])]); ok(MS); }; document.head.appendChild(sc); }); }
+async function search(){ const raw = en($("#q").value.trim()), R = $("#res"); if(!raw){ R.style.display = "none"; return; }
+  let L = [], m = raw.match(/^(\d{1,3})\s*[:：\/ ]\s*(\d{1,3})$/);
+  if(m && SU[+m[1]]) L = [[+m[1], +m[2], ""]];
+  else { m = raw.match(/^(.+?)\s+(\d{1,3})$/); const nm = bare((m ? m[1] : raw).replace(/^سوره\s+|^سورة\s+/, "")).replace(/^ال/, "");
+    const su = IX.suwar.filter(s => bare(s.name).replace(/^ال/, "") === nm);
+    if(su.length) L = [[su[0].n, m ? +m[2] : firstKh(su[0].n), ""]];
+    else if(bare(raw).length >= 3){ const q = bare(raw); L = (await mushaf()).filter(a => a[3].includes(q)).slice(0, 60); } }
+  R.innerHTML = L.map(a => '<a href="#' + a[0] + ':' + a[1] + '" data-s="' + a[0] + '" data-a="' + a[1] + '"><b>' + esc(SU[a[0]].name) + ' ' + ar(a[1]) + (SU[a[0]].kh.includes(a[1]) ? ' ● خلاف' : '') + '</b> ' + (a[2] ? '﴿' + esc(a[2]) + '﴾' : '') + '</a>').join("") || '<a>لا نتائج.</a>';
+  R.style.display = "block"; R.querySelectorAll("a[data-s]").forEach(x => x.onclick = e => { e.preventDefault(); R.style.display = "none"; $("#q").value = ""; $("#fm").value = ""; go(+x.dataset.s, +x.dataset.a); }); }
+$("#q").oninput = () => { clearTimeout(window._t); window._t = setTimeout(search, 220); };
+$("#q").onkeydown = e => { if(e.key === "Enter"){ const f = $("#res a[data-s]"); if(f) f.click(); } if(e.key === "Escape") $("#res").style.display = "none"; };
+document.addEventListener("click", e => { if(!e.target.closest(".srch")) $("#res").style.display = "none"; });
+$("#mb").onclick = () => { const d = $("#mn"); d.showModal ? d.showModal() : d.setAttribute("open", ""); d.scrollTop = 0; };
+$("#mn").addEventListener("click", e => { if(e.target === $("#mn")) $("#mn").close(); });
+(function(){ const Q = IX.qawaid; if(!Q){ $("#qb").style.display = "none"; return; }
+  $("#qt").innerHTML = '<table><tr><th>القاعدة</th><th>المجموع</th>' + MUH.map(a => '<th>' + esc(nm(a)) + '</th>').join("") + '</tr>' + Q.rows.map(r => '<tr><th>' + esc(r[0]) + '</th><td class="z">' + ar(r[1]) + '</td>' +
+    MUH.map((a, i) => r[2 + i] ? '<td class="c" data-q="' + esc(r[0]) + '" data-a="' + a + '">' + ar(r[2 + i]) + '</td>' : '<td class="z">·</td>').join("") + '</tr>').join("") + '</table>';
+  $("#qt").querySelectorAll("td.c").forEach(td => td.onclick = () => { $("#qt").querySelectorAll("td.on").forEach(x => x.classList.remove("on")); td.classList.add("on");
+    const L = Q.mawadi[td.dataset.q + "|" + td.dataset.a] || [];
+    $("#qm").innerHTML = '<h4>' + esc(td.dataset.q) + ' عند ' + esc(nm(td.dataset.a)) + ' — ' + ar(L.length) + ' آية</h4>' + L.map(x => '<a href="#' + x[0] + ':' + x[1] + '" data-s="' + x[0] + '" data-a="' + x[1] + '">' + esc(SU[x[0]].name) + ' ' + ar(x[1]) + '</a>').join("");
+    $("#qm").querySelectorAll("a").forEach(x => x.onclick = e => { e.preventDefault(); $("#qd").close(); $("#fm").value = ""; go(+x.dataset.s, +x.dataset.a); }); });
+  $("#qb").onclick = () => { const d = $("#qd"); d.showModal ? d.showModal() : d.setAttribute("open", ""); d.scrollTop = 0; };
+  $("#qd").addEventListener("click", e => { if(e.target === $("#qd")) $("#qd").close(); }); })();
+$("#ob").onclick = () => document.querySelector(".opts").classList.toggle("show");
+/* —— البداية —— */
+function fromHash(){ const m = decodeURIComponent(location.hash.slice(1)).match(/^(\d+):(\d+)$/); if(m && SU[+m[1]]) go(+m[1], +m[2], false); else { let s = 1, a = 1; try { const l = JSON.parse(localStorage.getItem("kh_last") || "null"); if(l) [s, a] = l; } catch(e){} go(s, s === 1 && a === 1 ? firstKh(1) : a, false); } }
+window.onpopstate = fromHash; window.addEventListener("beforeunload", () => { try { localStorage.setItem("kh_last", JSON.stringify([S, A])); } catch(e){} });
+fromHash();
+</script></body></html>

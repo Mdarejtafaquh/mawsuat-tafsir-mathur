@@ -215,7 +215,7 @@ function draw(){
     return; }
   $("#st").textContent = "";
   const L = UA(A), X = EX(A);
-  $("#out").innerHTML = '<div class="ayah"><div class="tx">﴿' + esc(D.ayat[A] || "") + '﴾</div><div class="mt"><span class="pill"><b>' + esc(SU[S].name) + '</b> ' + ar(A) + '</span><span>' + (L.length ? ar(L.length) + ' موضع خلاف' : 'لا موضع خلاف مستخرَج') + '</span><span>' + ar(D.n_athar[A] || 0) + ' أثرًا في الموسوعة</span>' + (EMB ? '' : '<a href="سور/' + pad(S) + '.html" target="_blank">صفحة آثار السورة</a>') + '</div></div>' +
+  $("#out").innerHTML = '<div class="ayah"><div class="tx">﴿' + esc(D.ayat[A] || "") + '﴾</div><div class="mt"><span class="pill"><b>' + esc(SU[S].name) + '</b> ' + ar(A) + '</span><span>' + (L.length ? ar(L.length) + ' موضع خلاف' : 'لا موضع خلاف مستخرَج') + '</span><span>' + ar(D.n_athar[A] || 0) + ' أثرًا في الموسوعة</span>' + (EMB || window.KH_WEB ? '' : '<a href="سور/' + pad(S) + '.html" target="_blank">صفحة آثار السورة</a>') + '</div></div>' +
     L.map((u, i) => unit(u, i + 1, L.length)).join("") +
     X.map(e => '<section class="u"><h3><span>' + (e.ihala ? 'إحالة عند المشد' : 'صف عند المشد لم يُحاذَ بمسألة من نص الطبري') + '</span></h3><div class="body"><div class="imgw">' + e.imgs.map(img).join("") + '</div></div></section>').join("") + others(A) +
     (!L.length && !X.length && !(D.others[A] || []).length ? '<div class="empty">لم يُستخرج في هذه الآية خلاف ولا تعليق. انتقل إلى التالية، أو فعّل «التنقل بين آيات الخلاف فقط».</div>' : '');
